@@ -1,0 +1,37 @@
+/*html {background-color: #AA3939;}*/
+html {margin: 0; padding: 0; border: 0.1px transparent; scroll-behavior: smooth;}
+header, footer {background-color: #351212; color: silver; width: 100vw;}
+.Contents, #MID  {min-width: 500px; max-width: 1200px; margin-left: auto; margin-right: auto;}
+
+section {border: 5px solid black; margin: 2rem; margin-top: 6rem; margin-bottom: 6rem; position: relative;}
+section:not(:last-of-type)::before {display:block; content: ""; width: 110vw; height: 1.7rem; background-color: red;
+                 position:absolute; bottom: -3.5rem; left: -10%; z-index: 2; translate: 0 50%;}
+section:not(:last-of-type)::after {display:block; content: ""; width: 4rem; height: 4rem; border-radius: 50%; border: black solid 0.1rem;
+                position:absolute; bottom: -3.5rem; left: 50%;  translate: -50% 50%; z-index: 3;
+                background-image: url('./images/Badge.png'); background-size: cover; background-position: center;}
+section:last-of-type {margin-bottom: 2rem;}
+                
+
+h1, h2, h3 {text-align: center;}
+
+
+#TOP {padding: 2rem;}
+#TOP h1 {color: red;}
+#TOP  h2 {color: white;}
+#TOP image {display: block; margin-left: auto; margin-right: auto;}
+#TOP blockquote, #TOP p {color: silver; display: inline;}
+
+#Me {display: block; padding: 1rem;}
+#Me p {display: inline;  align-content: justify;}
+#Me img {float: right; width: 11rem; height: auto; margin-right: 1rem;
+    border-radius: 50%; background-color: silver; border: 5px solid red; filter: brightness(140%);}
+
+#Teams div {display: block; background-color: rgb(182, 44, 12); padding: 5px; max-width: 940px;}
+#Teams .members {margin-left: auto; margin-right: auto;}
+#Teams .members .hero {display: inline-block; margin-bottom: 1rem; margin-left: 1rem;
+                    border: 5px solid black; background-color: rgb(36, 36, 36);}
+
+
+#Teams .members .hero img { display: block; background-color: silver; width:14rem; height:18rem;}
+#Teams .members .hero {color: red;}
+
