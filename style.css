@@ -1,37 +1,127 @@
 /*html {background-color: #AA3939;}*/
 html {margin: 0; padding: 0; border: 0.1px transparent; scroll-behavior: smooth;}
-header, footer {background-color: #351212; color: silver; width: 100vw;}
+body {margin-left: auto; margin-right: auto;}
+header, footer {background-color: #351212; color: silver; width: 100vw; padding-top: 1rem; padding-bottom: 1rem;}
 .Contents, #MID  {min-width: 500px; max-width: 1200px; margin-left: auto; margin-right: auto;}
 
 section {border: 5px solid black; margin: 2rem; margin-top: 6rem; margin-bottom: 6rem; position: relative;}
-section:not(:last-of-type)::before {display:block; content: ""; width: 110vw; height: 1.7rem; background-color: red;
-                 position:absolute; bottom: -3.5rem; left: -10%; z-index: 2; translate: 0 50%;}
-section:not(:last-of-type)::after {display:block; content: ""; width: 4rem; height: 4rem; border-radius: 50%; border: black solid 0.1rem;
+section:not(:last-of-type)::before {display:block; content: ""; width: 105vw; height: 1.7rem; background-color: red;
+                 position:absolute; bottom: -3.5rem; left: -15%; z-index: 2; translate: 0 50%; 
+                 border: 0.15rem solid black; border-right: transparent;}
+section:not(:last-of-type)::after {display:block; content: ""; width: 4rem; height: 4rem; border-radius: 50%; border: black solid 0.15rem;
                 position:absolute; bottom: -3.5rem; left: 50%;  translate: -50% 50%; z-index: 3;
                 background-image: url('./images/Badge.png'); background-size: cover; background-position: center;}
 section:last-of-type {margin-bottom: 2rem;}
                 
+h1, h2, h3, h4 {text-align: center;}
+h2, h4 {font-family: "Luckiest Guy", cursive; font-weight: 400; font-style: normal;}
 
-h1, h2, h3 {text-align: center;}
+/*html {background-color: #351212;}
+section {background: white;}*/
 
 
+/*Navigation = menu*/
+#Menu {display: block; background-color: black; border: 5px solid #FF2727; filter: opacity(0.9);
+       position: fixed; top: 10rem; right: -5px; padding: 2rem; padding-top: 0.5rem; padding-bottom: 0.5rem; z-index: 5;}
+#Menu ul{list-style: none; padding: 0;}
+#Menu ul li:first-of-type {border-top: 3px dashed white;}
+#Menu ul li {border-bottom: 3px dashed white;}
+#Menu ul li a {text-decoration: none; color: #FF2727; font-size: large;}
+    /*Menu button*/
+    #Menu button {content: "A"; background-color: aquamarine;}
+
+ 
+
+/*Heading of page*/
 #TOP {padding: 2rem;}
 #TOP h1 {color: red;}
-#TOP  h2 {color: white;}
-#TOP image {display: block; margin-left: auto; margin-right: auto;}
+#TOP  h2 {color: white; }
+#TOP img {display: block; margin-left: auto; margin-right: auto; width: 65rem; height: 25rem; }
+#TOP #quote {display: block;}
 #TOP blockquote, #TOP p {color: silver; display: inline;}
 
+
+/*Evidence card part*/
+#Evidence {/*background-color: yellow; box-shadow: 0 0  1rem 0.25rem black inset;*/ padding-bottom: 1rem;
+            display: grid; grid-template-columns:  25% 27.5% 25% auto;}
+#Evidence h2 {grid-column: 1 /span 4; grid-row: 1; position: relative;}
+#Evidence img {grid-column: 1; grid-row: 2 / span 4;}
+#Evidence img {margin-left: 1rem; border-radius: 50%; border: 5px solid black;  margin:auto; margin-right: none;}
+#Evidence p {display: block; margin-left: 2rem;}
+#Evidence p strong {color: #FF2727;}
+#Evidence p:last-of-type {text-decoration: line-through;}
+#Evidence h2::after {content: ""; width:5rem; height:5rem; background-image: url(./images/X-man_trainee.png); z-index: -1; filter: opacity(0.8);
+                    position: absolute; bottom: -7.5rem; left: 50%;translate: -50% 0; background-size: cover; background-position: center;}
+
+/*About me part*/
 #Me {display: block; padding: 1rem;}
 #Me p {display: inline;  align-content: justify;}
 #Me img {float: right; width: 11rem; height: auto; margin-right: 1rem;
     border-radius: 50%; background-color: silver; border: 5px solid red; filter: brightness(140%);}
 
-#Teams div {display: block; background-color: rgb(182, 44, 12); padding: 5px; max-width: 940px;}
-#Teams .members {margin-left: auto; margin-right: auto;}
+
+#Career {text-align: center;}
+#Career span {margin-left: 1rem; text-decoration:line-through;}
+#Career a {display: block; color: gold; text-decoration: none; font-size: larger;}
+#Career p:last-of-type a {color: red; }
+
+
+#Teams div {display: block; /*background-color: rgb(182, 44, 12);*/ padding: 5px; max-width: 1200px; text-align: center;}
+#Teams .members {margin-left: auto; margin-right: auto; }   /* Not working*/
 #Teams .members .hero {display: inline-block; margin-bottom: 1rem; margin-left: 1rem;
                     border: 5px solid black; background-color: rgb(36, 36, 36);}
 
 
-#Teams .members .hero img { display: block; background-color: silver; width:14rem; height:18rem;}
+#Teams .members .hero img { display: block; background-color: silver; width:14rem; height:18rem; margin-left: auto; margin-right: auto;}
 #Teams .members .hero {color: red;}
 
+
+
+/*Review part*/
+#Review {display: grid; grid-template-columns: 40% 20% 40%; column-gap: 0.1rem;}
+#Review h2 {grid-column: 1 /span 3; grid-row: 1; margin-left: auto; margin-right: auto;}
+#Review .Note:nth-of-type(1) {grid-column: 1 /span 2; grid-row: 2;}
+#Review .Note:nth-of-type(2) {grid-column: 2 /span 3; grid-row: 3;}
+#Review .Note:nth-of-type(3) {grid-column: 1 /span 2; grid-row: 4;}
+
+
+#Review .Note {display: grid; grid-template-columns: fit-content fit-content; column-gap: 2rem;}
+#Review .Note:last-of-type {padding-bottom: 2rem;}
+#Review .Note  h3 {grid-column: 1 /span 2; grid-row: 1;}
+#Review .Note:nth-of-type(odd) img {grid-column: 1; grid-row: 2; margin-left: auto;}
+#Review .Note:nth-of-type(even) img {grid-column: 2; grid-row: 2; margin-right: auto;}
+#Review .Note:nth-of-type(even) blockquote {margin-left: auto; }
+
+#Review .Note > img {width: 10rem; height: 10rem; object-fit: cover; object-position: center; max-width: none; max-height: none; border-radius: 25%;}
+#Review .Note blockquote { padding: 1rem; background-color: silver; border-radius: 10%; position: relative;
+                            width: fit-content; margin-bottom: auto; box-shadow: 0 0 10px black;}
+#Review .Note blockquote::before {content: ""; width: 1rem; height: 1rem; position: absolute;
+                                  background-color: silver; border-radius: 50%; box-shadow: 0 0 5px black;}                   
+#Review .Note:nth-of-type(odd) blockquote::before {left: -2.5rem; bottom: -1.5rem;}
+#Review .Note:nth-of-type(even) blockquote::before {right: -2.5rem; bottom: -1.5rem;}
+
+
+/*Me-s part*/
+#Me-s {text-align: justify;}
+#Me-s .Version:not(:last-of-type) {border-bottom: 3px dashed black; }
+#Me-s .Version .inside {display: grid; grid-template-columns: auto auto; column-gap: 1rem; margin-left: 3rem; margin-right: 3rem; margin-bottom: 2rem;}
+#Me-s .Version:nth-of-type(odd) img {grid-column: 2; grid-row: 1;}
+#Me-s .Version:nth-of-type(even) img {grid-column: 1; grid-row: 1;}
+#Me-s p {margin: auto; margin-left: 0; margin-right: 2rem;}
+#Me-s img {width: 10rem; height: 10rem; object-fit: cover; object-position: center; max-width: none; max-height: none; border-radius: 25%;}
+#Me-s img:last-of-type {filter: brightness(130%);}
+
+/*NSFW part*/
+#NSFW #btns {display: grid; grid-template-columns: 1fr 1fr; column-gap: 5rem; margin-bottom: 1rem;}
+#NSFW button {background-color: black; color: #FF2727; border: 2px solid #FF2727; border-radius: 15%; padding: 1rem; width: fit-content;}
+#NSFW button:first-of-type { margin-left: auto; margin-right: 1.5rem;}
+#NSFW button:last-of-type {margin-right: auto; }
+
+/*Thanks part*/
+#Thanks {text-align: center;}
+#Thanks img {width: 20rem; height: auto; margin-left: auto; margin-right: auto; border-radius: 5%;}
+#Thanks p {color: goldenrod;}
+
+#BOTTOM {text-align: center;}
+#BOTTOM #Disclaimer p:last-of-type {color: #FF2727;}
+#BOTTOM #Disclaimer a {display: block; content: url(./images/Marvel_studios.png); width: 15rem; height: 5rem; margin-left: auto; margin-right: auto;}
