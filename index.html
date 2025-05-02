@@ -31,20 +31,19 @@
                         <p>:by Wade Wilson (DP1)</p>
                     </div>
                 </div>
-                <div class="nav" id="Menu">
-                    <!-- Import color -->
-                     <button id="Rollout"></button>
-                     <ul>
-                        <li><a href="#Title">Index</a></li>
-                        <li><a href="#Evidence">Evidence</a></li>
-                        <li><a href="#Me">This is me</a></li>
-                        <li><a href="#Career">Career</a></li>
-                        <li><a href="#Teams">Teams</a></li>
-                        <li><a href="#Recom">Reviews</a></li>
-                        <li><a href="#Me-s">Also Me</a></li>
-                        <!--<li><a href="#Art">Art</a></li> --->
-                        <li><a href="#NSFW">NSFW</a></li>
-                        <li><a href="#Thanks">The world!</a></li>
+                <button class="Menu" id="Roll" onclick="RollDown()"></button>
+                <div class="Menu" id="nav">
+                     <ul id="Table">
+                        <li><a class="Travel" href="#Title">Index</a></li>
+                        <li><a class="Travel" href="#Evidence">Evidence</a></li>
+                        <li><a class="Travel" href="#Me">This is me</a></li>
+                        <li><a class="Travel" href="#Career">Career</a></li>
+                        <li><a class="Travel" href="#Teams">Teams</a></li>
+                        <li><a class="Travel" href="#Review">Reviews</a></li>
+                        <li><a class="Travel" href="#Me-s">Also Me</a></li>
+                        <!--<li><a class="Travel" href="#Art">Art</a></li> --->
+                        <li id="is"><a class="Travel" href="#NSFW">NSFW</a></li>
+                        <li><a class="Travel" href="#Thanks">The world!</a></li>
                      </ul>
                 </div>
              </div>
@@ -175,17 +174,17 @@
 
              <section id="Review">
                 <h2>Recommendations</h2>
-                <div class="Note">
+                <div class="Note" id="com1">
                     <h3>Weasel</h3>
                     <img src="https://static.wikia.nocookie.net/xmenmovies/images/a/aa/Weasel_TJ_Miller.png/revision/latest?cb=20160214022355" alt="">
                     <blockquote>Nulla varius dui vitae tempor</blockquote>
                 </div>
-                <div class="Note">
+                <div class="Note" id="com2">
                     <h3>Ajax</h3>
                     <img src="https://static.wikia.nocookie.net/xmenmovies/images/b/b1/AjaxM.jpg/revision/latest?cb=20200322143550" alt="">
                     <blockquote>Ultrices sem nec</blockquote>
                 </div>
-                <div class="Note">
+                <div class="Note" id="com3">
                     <h3>Blind Al</h3>
                     <img src="https://static.wikia.nocookie.net/xmenmovies/images/e/ef/BlindAlCU.jpg/revision/latest?cb=20240212183619" alt="">
                     <blockquote>Aenean eget odio nullar</blockquote>
@@ -251,8 +250,8 @@
              <section id="NSFW">
                 <h2>NSFW</h2>
                 <div id="btns">
-                    <button id="Fired">I want to be fired</button>
-                    <button id="Stay">Leave me be, you hot red demon</button>
+                    <button id="Fired" onclick="FireMe()">I want to be fired</button>
+                    <button id="Stay" onclick="Erase()">Leave me be, you hot red demon</button>
                 </div>
                 <!-- Unicorn -->
              </section>
