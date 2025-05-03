@@ -15,6 +15,11 @@ section:last-of-type {margin-bottom: 2rem;}
                 
 h1, h2, h3, h4 {text-align: center;}
 h2, h4 {font-family: "Luckiest Guy", cursive; font-weight: 400; font-style: normal;}
+h3 {font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-style: normal;}
+p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700; font-style: normal;}
 
 /*Navigation = menu*/
 .Menu ul {display: none; background-color: black; border: 5px solid #a32b2b; filter: opacity(0.9);
@@ -123,3 +128,37 @@ h2, h4 {font-family: "Luckiest Guy", cursive; font-weight: 400; font-style: norm
 #BOTTOM {text-align: center;}
 #BOTTOM #Disclaimer p:last-of-type {color: #FF2727;}
 #BOTTOM #Disclaimer a {display: block; content: url(./images/Marvel_studios.png); width: 15rem; height: 5rem; margin-left: auto; margin-right: auto;}
+#BOTTOM #Author p {text-align: right; margin-right: 2rem;}
+#BOTTOM #Author p strong {color: #FF2727;}
+
+/* XS SM */
+@media only screen and (max-width: 427px){
+
+    html {width: fit-content; max-width: 425px;}
+    section {margin-left: 0; margin-right: 0; width: 100%;} 
+    section:not(:last-of-type)::before {width: 150vw; right: 0;}
+    section:first-of-type {margin-top: 1rem ;}
+
+    #TOP { width: 110vw;}
+    #BOTTOM  { width: 125vw;}
+
+    .Menu ul {right: 2rem};
+    #Title button #Roll {right: 2rem;}
+
+    #TOP img {display: block; margin-left: 0; width: 25rem; height: 10rem;  margin-right: 0; }
+    .Contents {width: inherit;}
+    .Contents div {width: inherit;}
+
+    #Evidence h2::after {display: none;} 
+    #Me-s .Version .inside {display: inline; text-align: justify; }
+    #Me-s img {float: left; margin-right: 1rem; margin-left: 1rem;}
+    
+}
+
+@media only screen and (min-width: 428px) and (max-width: 767px){
+    html::before {display: block; content: "WARNING: Unsupported display size!!!  Experience might be unpleasant"; }
+}
+
+@media only screen and (min-width: 768px){
+
+}
