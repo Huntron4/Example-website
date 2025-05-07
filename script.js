@@ -1,16 +1,16 @@
-//MENU button + style
-//NSFW YESS -> show pop up (multiple) + unicorn
-//NSFW NO -> hide section
 
+// Initialization on start
 window.onload = function() {
     let ref = document.getElementsByClassName("Travel");
     for (let i = 0; i < ref.length; i++) {
         ref[i].addEventListener("click", RollUp);
     }
     Comments();
+    document.getElementById("Roll").addEventListener("click", RollDown);      //onclick="RollDown()"
+    document.querySelector("Hill").addEventListener("click", RollUp);
 }
 
-
+// NSFW left button handling function
 function FireMe(){
     let act = document.getElementById("Fired").textContent;
 
@@ -30,27 +30,37 @@ function FireMe(){
         alert("You little pervert");
         document.getElementById("NSFW").style.display = "none";
         document.getElementById("is").style.display = "none";
+        document.getElementById("Unicorn").style.display = "block";
     }
 }
 
+// NSFW right button handling function
 function Erase(){
     alert("Good job :) ");
     document.getElementById("NSFW").style.display = "none";
     document.getElementById("is").style.display = "none";
 }
 
+// Show navigation 
 function RollDown() {
+    let exist = document.querySelector(".Menu ul::after");
     document.getElementById("Table").style.display = "block";
     document.getElementById("Roll").style.display = "none";
-    setTimeout(RollUp, 4000);
+    if (!exist){
+        setTimeout(RollUp, 4000);
+    }
+    else {
+        setTimeout(RollUp, 15000);
+    }
   }
 
+// Hide navigation 
 function RollUp() {
     document.getElementById("Table").style.display = "none";
     document.getElementById("Roll").style.display = "block";
 }
 
-
+// Recommendations section, quote switcher
 setInterval(Comments, 4000)
 function Comments(){
     let one = document.getElementById("com1").style.display;
@@ -73,4 +83,14 @@ function Comments(){
         document.getElementById("com2").style.display = "none";
         document.getElementById("com3").style.display = "none";
     }
+}
+
+// "Return function" ;D
+function Jump(){
+    alert("BINGO!");
+    setTimeout(function(){
+        document.getElementById("NSFW").style.display = "block";
+        document.getElementById("Unicorn").style.display = "none";
+    }, 100);
+    
 }

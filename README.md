@@ -7,27 +7,10 @@ For Website page, mainly created to fulfill creative task from university class.
 
 photo exchanging mask - unmask on hover mby
 
-backup for button:
-#Menu button {
-    width: 125px; /* Clickable area */
-    height: 125px; /* Clickable area */
-    position: relative; /* Allows for child elements to be positioned */
-    overflow: hidden; /* Prevents overflowing content from being clickable */
-    background-color: white; /* Just an example */
-    border-bottom: 10px solid black; z-index: 5;
-}
-
-#Menu button::before {
-    content: "";
-    position: absolute; top: 0; left: 0; z-index: 6;
-    width: 360px; /* Original icon size */
-    height: 550px; /* Original icon size */
-    background-image: url("./images/Reading.png");
-    background-size: cover; /* Makes sure the image is fully visible */
-    background-position: center;
-    transform: scale(0.5); /* Reduces size to half */
-    /*transform-origin: top left; /* Ensures proper scaling reference */
-}
+- /*TO DO Table edit*/
+- Me-s dynamic selector (.js)
+- onload-onleave cover on big screen
+- members killed + fade onMouseOut
 
 
 ---
