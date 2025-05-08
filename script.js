@@ -6,8 +6,9 @@ window.onload = function() {
         ref[i].addEventListener("click", RollUp);
     }
     Comments();
-    document.getElementById("Roll").addEventListener("click", RollDown);      //onclick="RollDown()"
-    document.querySelector("Hill").addEventListener("click", RollUp);
+    document.getElementById("Roll").addEventListener("click", RollDown);
+    document.getElementById("Hill").addEventListener("click", RollUp);
+    document.getElementById("Hill").style.display = "none";
 }
 
 // NSFW left button handling function
@@ -43,13 +44,14 @@ function Erase(){
 
 // Show navigation 
 function RollDown() {
-    let exist = document.querySelector(".Menu ul::after");
+    let exist = document.getElementById("Hill").style;
     document.getElementById("Table").style.display = "block";
     document.getElementById("Roll").style.display = "none";
-    if (!exist){
+    if (exist.opacity == 0){
         setTimeout(RollUp, 4000);
     }
     else {
+        document.getElementById("Hill").style.display = "block";
         setTimeout(RollUp, 15000);
     }
   }
@@ -57,6 +59,7 @@ function RollDown() {
 // Hide navigation 
 function RollUp() {
     document.getElementById("Table").style.display = "none";
+    document.getElementById("Hill").style.display = "none";
     document.getElementById("Roll").style.display = "block";
 }
 

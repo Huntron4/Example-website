@@ -37,7 +37,7 @@ p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700;
         position: fixed; top: 6.7rem; right: 0px; overflow: visible; z-index: 10; }
 #Roll::before {content: ""; position: absolute; top: -2.25rem; left: -0.5rem; width: 120%; height: 250%; background-repeat: no-repeat;
              background-image: url("./images/Reading.png"); overflow: visible; background-position: center; background-size: contain;}
-
+#Hill {opacity: 0;}
  
 
 /*Heading of page*/
@@ -173,11 +173,10 @@ p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700;
     }
 
     /*Table edit*/
-    #Roll {display: none;}
     .Menu ul li {display: block; width: 92vw; height: auto;}
     .Menu ul {
         top: 6.5rem; left: 50%; 
-        transform: translateX(-50%); display: block;
+        transform: translateX(-50%); 
         width: fit-content; text-align: center;
         padding-right: 0.5rem; padding-left: 0.5rem;
         border-top: transparent; filter: opacity(1);
@@ -190,13 +189,14 @@ p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700;
         left: 50%; translate: -50% -98%;
         border: #a32b2b 5px solid; border-bottom: 0.001px transparent; 
     }
-    .Menu ul::after { 
+    #Hill { 
         content: ""; background-image: url("./images/Rest.png"); 
+        display: block; opacity: 1;
         width: 19rem; height: 8.7rem;
-        position: absolute; top: 0;
-        left: 50%; translate: -50% -87%;
+        position: fixed; top: 0;
+        left: 50%; translate: -50% 0%;
         background-size: cover; background-position: center;
-        overflow: visible; z-index: 1;
+        overflow: visible; z-index: 11;
     }
 
     
