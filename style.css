@@ -77,10 +77,16 @@ p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700;
 #Teams div {display: block; /*background-color: rgb(182, 44, 12);*/ padding: 5px; max-width: 1200px; text-align: center;}
 #Teams .members {margin-left: auto; margin-right: auto; }   /* Not working*/
 #Teams .members .hero {display: inline-block; margin-bottom: 1rem; margin-left: 1rem;
-                    border: 5px solid black; background-color: rgb(36, 36, 36);}
+                    border: 5px solid black; background-color: rgb(36, 36, 36);
+                    filter:grayscale(1) blur(5px) sepia(50%) opacity(0.9); transition:  ease-in-out 0.5s; }
 #Teams .members .hero img { display: block; background-color: silver; width:14rem; height:18rem; margin-left: auto; margin-right: auto;}
 #Teams .members .hero {color: red;}
 #Teams #Xforce p a {text-decoration: none; color: red}
+
+#Teams>div h3 {transition:  ease-in-out 0.2s;}
+#Teams>div:hover h3 {filter:  drop-shadow(0.2); text-decoration: underline ; transform: scale(1.2); } 
+#Teams .hero:hover {transform: scale(1.05); filter:grayscale(0) blur(0px) sepia(0%) opacity(1); 
+                    border: #FF2727 5px solid; box-shadow: 5px 5px solid white;}
 
 
 
@@ -134,7 +140,9 @@ p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700;
 
 /*Thanks part*/
 #Thanks {text-align: center;}
-#Thanks img {width: 20rem; height: auto; margin-left: auto; margin-right: auto; border-radius: 5%;}
+#Thanks img {width: 20rem; height: auto; margin-left: auto; margin-right: auto; border-radius: 5%; 
+            transition: 0.2s ease-out;}
+
 #Thanks p {color: goldenrod;}
 
 #BOTTOM {text-align: center; padding-bottom: 0.5;}
@@ -151,6 +159,32 @@ p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700;
     width: 2.5rem; height: auto; overflow: hidden;
     float:left; padding-left: 1rem; transform: translateY(-50%); 
 }
+
+
+/*Entry screen*/
+#Entry {position: fixed; z-index: 25; top: 0; left: 0;
+        display: block; width: 100vw; height: 100vh;
+        background-color: #a32b2b;
+        }
+#Entry {text-align: center; color: white;} 
+#Entry h3 {font-size: 8vw;
+           margin-bottom: 1rem; margin-top: 10vh;}
+#Entry p {font-size: 2.5vw;}
+#Entry p em {color: rgb(4, 207, 4)}
+#Entry p strong:first-of-type {color: black; }
+#Entry p strong:last-of-type {color: #FF2727; }
+
+#Entry button { padding: 1.5rem;
+               border-radius: 50%; border: white 4px solid;
+                color: #FF2727; background-color: black;
+                font-family: "Alfa Slab One", serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 2vw;}
+
+
+
+
 
 
 
@@ -223,13 +257,37 @@ p {font-family: "Teko", sans-serif; font-optical-sizing: auto; font-weight: 700;
 
     #BOTTOM .Contents div {padding: 1rem; padding-bottom: 0;}
     #BOTTOM #End-credits p {margin: 0;}
+
+    #Entry h3 {font-size: 2.5rem;}
+    #Entry p {font-size: 1.5rem; width: 80%; margin-right: auto; margin-left: auto;}
+    #Entry button { padding: 1rem;
+               border-radius: 50%; 
+               border: white 2px solid;
+               font-size: 1rem;}
     
 }
 
 @media only screen and (min-width: 428px) and (max-width: 767px){
     html::before {display: block; content: "WARNING: Unsupported display size!!!  Experience might be unpleasant"; }
+    #Entry h3::after {display: block; content: ""; position: fixed;
+                    z-index: 26; background-image: url("./images/Rest.png"); 
+                    background-size: contain; background-position: center;
+                    bottom: 0; left: 50%; translate: -50% 14%; background-repeat: no-repeat;
+                    width: 80vw; height: 40vh; overflow: visible;}
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 1099px){
+    #Entry h3::after {display: block; content: ""; position: fixed;
+                    z-index: 26; background-image: url("./images/Rest.png"); 
+                    background-size: contain; background-position: center;
+                    bottom: 0; left: 50%; translate: -48% 14%; background-repeat: no-repeat;
+                    width: 76vw; height: 38vh; overflow: visible;}
+}
 
+@media only screen and (min-width: 1100px){
+    #Entry h3::after {display: block; content: ""; position: fixed;
+                    z-index: 26; background-image: url("./images/Rest.png"); 
+                    background-size: contain; background-position: center;
+                    bottom: 0; left: 50%; translate: -49% 14%; background-repeat: no-repeat;
+                    width: 68vw; height: 30vh; overflow: visible;}
 }

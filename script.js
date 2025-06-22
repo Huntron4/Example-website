@@ -1,14 +1,25 @@
 
 // Initialization on start
 window.onload = function() {
+
+    //Entry
+    document.body.style.overflow = "hidden"; 
+    
+    //Navigation panel
     let ref = document.getElementsByClassName("Travel");
     for (let i = 0; i < ref.length; i++) {
         ref[i].addEventListener("click", RollUp);
     }
+
+    //Section with comments
     Comments();
     document.getElementById("Roll").addEventListener("click", RollDown);
     document.getElementById("Hill").addEventListener("click", RollUp);
     document.getElementById("Hill").style.display = "none";
+    
+    //Hide bottom picture ("Thanks" section)
+    document.getElementById("World").style.filter= "blur(10px) sepia(1) opacity(0.2)";
+    document.getElementById("World").addEventListener("click", Show); 
 }
 
 // NSFW left button handling function
@@ -96,4 +107,15 @@ function Jump(){
         document.getElementById("Unicorn").style.display = "none";
     }, 100);
     
+}
+
+function Show(){
+    alert("This is my whole World");
+    document.getElementById("World").style.filter= "blur(0) opacity(1) sepia(0.3) brightness(0.9)";
+    document.getElementById("World").removeEventListener("click", Show);
+}
+
+function Open(){
+    document.getElementById("Entry").style.display = "none";
+    document.body.style.overflow = "auto";
 }
